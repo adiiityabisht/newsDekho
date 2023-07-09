@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import NewsItems from "./NewsItems";
-
-export class News extends Component {
-    articles=[
+{
+  "status": "ok",
+  "totalResults": 34,
+  "articles": [
     {
       "source": {
         "id": null,
@@ -264,43 +263,4 @@ export class News extends Component {
       "content": "A plane carrying six people crashed and burst into flames in a Southern California field early Saturday morning, killing everyone on board, officials said.\r\nThe plane was a Cessna C550 business jet, … [+1063 chars]"
     }
   ]
-    constructor(){
-        super();
-        console.log("This is News.js construcctor")
-        this.state= {
-            articles: this.articles,
-            loading: false
-        }
-    }
-  render() {
-    return (
-      <div className="container my-3">
-        <h2>newsdekho - A News App</h2>
-        <div className="row">
-          <div className="col-md-4">
-            <NewsItems
-              title="this is a title"
-              description="this is description"
-              imageUrl="https://s.yimg.com/ny/api/res/1.2/Hev_uAJg.90wPq1OEiDqqg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2023-07/8b01c390-1e11-11ee-853d-5c529a0f0559"
-              newsUrl="TODO"
-            />
-          </div>
-          <div className="col-md-4">
-            <NewsItems
-              title="this is a title"
-              description="this is description"
-            />
-          </div>
-          <div className="col-md-4">
-            <NewsItems
-              title="this is a title"
-              description="this is description"
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
 }
-
-export default News;
