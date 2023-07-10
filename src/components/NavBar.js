@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { PureComponent } from "react";
+import { Link } from "react-router-dom";
 
 export default class NavBar extends PureComponent {
   render() {
@@ -9,9 +10,9 @@ export default class NavBar extends PureComponent {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             newsdekho
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -31,9 +32,29 @@ export default class NavBar extends PureComponent {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
-                  About
-                </a>
+                <Link to="/business" className="nav-link">
+                  Business
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/entertainment" className="nav-link">
+                  Entertainment
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/health" className="nav-link">
+                  Health
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/sports" className="nav-link">
+                  Sports
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/technology" className="nav-link">
+                  Technology
+                </Link>
               </li>
             </ul>
           </div>
