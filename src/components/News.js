@@ -46,8 +46,8 @@ const News = (props) => {
   };
 
   const fetchMoreData = async () => {
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pagesize=${props.pageSize}`;
     setPage(page + 1);
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pagesize=${props.pageSize}`;
     setLoading(true);
     const data = await fetch(url);
     const parsedData = await data.json();
@@ -59,7 +59,10 @@ const News = (props) => {
 
   return (
     <>
-      <h1 className="text-center my-5">
+      <h1
+        className="text-center"
+        style={{ margin: "35px 0px", marginTop: "90px" }}
+      >
         newsdekho - Top Headlines ({capitalizeFirstLetter(props.category)})
       </h1>
       {/* {loading && <Spinner/>} */}
